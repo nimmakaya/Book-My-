@@ -1,9 +1,99 @@
-For react app to run in your system:
+# Movie Booking Website
 
-1. Install Node js in your system and Create a react app and replace contents of frontend folder into your react app
-2. Now run the react app by installing all required libraries
+This project is a full stack application for booking movie tickets online. It comprises a React-based frontend and a Golang-based backend with MongoDB as the database. The application allows users to register, login, view upcoming movies, and book tickets. Additionally, it provides an admin panel for managing movies, venues, and bookings.
 
-For backend APIS to run:
+## Structure
 
-1. Install Go in your system and Clone the backend folder
-2. Go to terminal and execute - go run main.go
+- **Backend** (`/backend`): Contains the Go API and MongoDB connection setup.
+  - `db/` - MongoDB connection utilities.
+  - `handlers/` - API handlers for CRUD operations on movie bookings.
+  - `models/` - Data models.
+  - `utils/` - Helper utilities.
+  - `main.go` - Server setup and API routes.
+- **Frontend** (`/frontend`):
+  - `User/` - Contains user-related features like registration, login, movie listings.
+  - `Admin/` - Admin functionalities such as manage cities, venues, movies.
+  - `App.js` - Main React component that ties the user interface together.
+
+**User Folder**
+The User folder contains all the components and assets related to the user interface and functionalities accessible to the general public or registered users. Here's what each part is typically responsible for:
+
+RegisterForm.js - Contains the user registration form and handles the registration process.
+LoginForm.js - Handles user authentication. Allows users to enter their credentials and access their accounts.
+UpcomingMovies.js - Displays a list of upcoming movies. May include brief descriptions, release dates, and other key information.
+MovieDetailsPage.js - Provides detailed information about a specific movie when a user selects one from the list. It typically includes trailers, cast information, venues, show timings, etc.
+SeatLayout.js - Responsible for displaying the seating arrangement of a specific showtime/movie. Allows users to select and book seats.
+ConfirmationPage.js - Shows a summary of the booking for user confirmation. Includes details like movie name, showtime, seats selected, and total price.
+Checkout.js - Handles the payment process. Users can enter payment details to finalize their booking.
+SplitTickets.js - Allows users to split ticket bookings among multiple participants, useful for group bookings.
+Profile.js - Displays user profile information and booking history. Users can edit their details or view past bookings.
+WelcomePage.js - The landing page after a user logs in. Generally provides a dashboard view with quick links to major features such as current bookings, upcoming movies, etc.
+icons/ - A folder containing images and icons used across the user interface.
+
+**Admin Folder**
+The Admin folder encompasses all the components related to administrative functions of the website. These components are accessible only to users with administrative privileges. The folder typically includes:
+
+CreateCity.js - Allows admins to add new cities where movies will be shown. Useful for geographical scaling of services.
+CreateVenue.js - Enables admins to add and manage venues (theaters) within registered cities, including details like number of screens, etc.
+CreateMovie.js - Admins can add new movies to the system, specifying details like title, cast and crew, release date, and attaching trailers or posters.
+OpenMovies.js - Used for scheduling showtimes for different movies at various venues. This involves setting the date, time.
+SelectVenue.js - Admin can select venues for opening movies section
+LoginForm.js - A separate authentication component for admins to access the backend administrative functionalities.
+WelcomePage.js - Welcome page for admin and showcase admin features
+
+## Prerequisites
+
+Before running the project, ensure you have the following installed:
+- Go (version 1.x)
+- Node.js and npm
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/nimmakaya/Book-My-Cinema.git
+cd Book-My-Cinema
+```
+
+### Setting up the Backend
+
+Navigate to the backend directory and install dependencies:
+
+```bash
+cd backend
+go get .
+```
+
+Run the server:
+
+```bash
+go run main.go
+```
+
+### Setting up the Frontend
+
+Navigate to the frontend directory:
+
+```bash
+cd ../frontend
+npm install
+```
+
+Start the React app:
+
+```bash
+npm start
+```
+
+The frontend should now be running on [http://localhost:3000].
+
+## Usage
+
+- Visit [http://localhost:3000] in your web browser to view the user interface.
+- Log in as an admin to manage the system, or register as a user to start booking movie tickets.
+
+## Deployment
+
+The application is deployed on AWS EC2 instances. 
+Access it at http://13.53.132.117
