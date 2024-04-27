@@ -15,7 +15,7 @@ This project is a full stack application for booking movie tickets online. It co
   - `Admin/` - Admin functionalities such as manage cities, venues, movies.
   - `App.js` - Main React component that ties the user interface together.
 
-**User Folder**
+**User Folder**  <br />
 The User folder contains all the components and assets related to the user interface and functionalities accessible to the general public or registered users. Here's what each part is typically responsible for:
 
 RegisterForm.js - Contains the user registration form and handles the registration process. <br />
@@ -30,7 +30,7 @@ Profile.js - Displays user profile information and booking history. Users can ed
 WelcomePage.js - The landing page after a user logs in. Generally provides a dashboard view with quick links to major features such as current bookings, upcoming movies, etc. <br />
 icons/ - A folder containing images and icons used across the user interface. <br />
 
-**Admin Folder**
+**Admin Folder** <br />
 The Admin folder encompasses all the components related to administrative functions of the website. These components are accessible only to users with administrative privileges. The folder typically includes:
 
 CreateCity.js - Allows admins to add new cities where movies will be shown. Useful for geographical scaling of services. <br />
@@ -92,6 +92,7 @@ The frontend should now be running on [http://localhost:3000].
 
 - Visit [http://localhost:3000] in your web browser to view the user interface.
 - Log in as an admin to manage the system, or register as a user to start booking movie tickets.
+- Admin credentials: Email: admin2901@gmail.com Password: admin2901
 
 ## Deployment
 
