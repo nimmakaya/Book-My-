@@ -56,6 +56,14 @@ git clone https://github.com/nimmakaya/Book-My-Cinema.git
 cd Book-My-Cinema
 ```
 
+**Note**: Github doesn't allow to push secret keys into repository. So please replace below keys with these values in code </br>
+File: backend/handlers/create_movie.go </br>
+Line number: 46  </br>
+Present code line: **Credentials: credentials.NewStaticCredentials("key", "access_key", ""),** </br>
+Expected code line: **Credentials: credentials.NewStaticCredentials("AKIAU6GDZRRARI4VNZ2V", "iN/HVROUPCzUGv+tMQU859mj6v+bmn1/QKYBf6IM", ""),** </br> 
+Please replace present line code with expected line code </br>
+
+
 ### Setting up the Backend
 
 Navigate to the backend directory and install dependencies:
